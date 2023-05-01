@@ -11,6 +11,7 @@ if (NODE_ENV == 'development'){
 } else if(NODE_ENV == 'production') {
   db = Atlas_Url
 }
-const connection = () => mongoose.connect(db, connectionParams);
+// const connection = () => mongoose.connect(db, connectionParams);
+const connection = () => mongoose.connect('mongodb+srv://AlaaAhmad:AlaaAhmad@mudb.kt16w9k.mongodb.net/?retryWrites=true&w=majority', connectionParams);
 
 module.exports = connection
